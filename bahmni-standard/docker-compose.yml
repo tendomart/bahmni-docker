@@ -266,6 +266,7 @@ services:
     restart: ${RESTART_POLICY}
 
   openmrsdb:
+    platform: linux/arm64
     image: ${OPENMRS_DB_IMAGE_NAME:?}
     restart: always
     profiles: ["emr","bahmni-standard", "metabase", "bahmni-mart"]
